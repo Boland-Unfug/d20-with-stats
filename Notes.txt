@@ -1,0 +1,9 @@
+Ok so version one has been made, it just contains this note, and the next version will contain imported libraries.
+The process plan: 
+1.) instantiate a die probability
+1a.) ensure this is easily accessable, and adds up to 1 throughout the process and watch out for floating point errors
+2.) add the ability to convolve using spipy fast convolve (xd6, 1d6 + 1d8)
+2a.) this will be done by effectively giving operations like + convolution equivalents that are called in the background
+2b.) add convolution shortcuts for die operations like advantage
+3.) apply operations like + and -
+4.) output a plot
