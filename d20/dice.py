@@ -237,6 +237,25 @@ class Roller:
             result.comment = force_comment
             return result
 
+    def plot(self,  #TODO, main changes on this fork
+        expr: Union[str, ASTNode],
+        stringifier: Optional[Stringifier] = None,
+        allow_comments: bool = False,
+        advantage: AdvType = AdvType.NONE): # This should all be the same as roll, as the input should be the same but output should differ, except maybe advantage
+        # advantage only applies to d20's? investigate #TODO
+        print("test")
+
+        if stringifier is None:
+            stringifier = MarkdownStringifier() #use the default stringifier if none are given
+
+        self.context.reset()
+
+        if isinstance(expr, str):  # is this a preparsed tree?
+            dice_tree = self.parse(expr, allow_comments)
+        else:
+            dice_tree = expr
+
+
     # evaluator
     def _eval(self, node: ASTNode) -> ExpressionNode:
         # noinspection PyUnresolvedReferences

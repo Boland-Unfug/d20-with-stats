@@ -219,3 +219,5 @@ def dfs(node: TreeType, predicate: Callable[[TreeType], bool]) -> Optional[TreeT
             return result
 
     return None
+
+# TODO may want to add a breadth first search to get ALL instances of a node type

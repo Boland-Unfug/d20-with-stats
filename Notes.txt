@@ -7,3 +7,13 @@ The process plan:
 2b.) add convolution shortcuts for die operations like advantage
 3.) apply operations like + and -
 4.) output a plot
+
+
+Observations:
+AST stands for Abstract Syntax Tree,
+Abstract - it only stores the concepts (ignores whitespace for example)
+Syntax -Stores syntax, such as 1d20 or +/- (I think these are stored in Nodes)
+Tree - uses the binary tree architecture
+Advantage and kh1 are functionally the same, but advantage is a game rule that gets translated into math via ast_adv_copy
+its cool, it can actually math very hard such as modulo, multiply, and divide, ah but it can't do powers, might want to add that in the future
+Need to see what an expression tree truly looks like
